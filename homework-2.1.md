@@ -2,8 +2,8 @@
 
 For Homework 1.1, you found a nice project on Github, forked it into your own account, and cloned it into your Cloud 9 IDE account. For this assignment, pick one or more PHP files from your project (you DID pick a PHP project, didn't you?) and identify some of the following items of PHP grammar and vocabulary that we talked about in class, including but not limited to:
 
-* Variables: `$name`
-* Constants: `E_USER_WARNING`, `MY_AWESOME_CONSTANT`
+* Variables: `$name`: 
+* Constants: `E_USER_WARNING`, `MY_AWESOME_CONSTANT` : 
 * Arithmetic operators: addition (+), subtraction (-)
 * Functions: `array_slice()`, `do_something_amazing()`
 
@@ -31,3 +31,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 ## Now get to it!
 
+File: PharStub.php Line:2  $Class
+File: Autoloader.php Line:58  spl_autoload_register
+$this->_pos += 4 $length;
+if (isset($this->_cellNotes[$obj['idObjID']])) {
