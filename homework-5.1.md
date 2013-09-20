@@ -29,6 +29,6 @@ My example:                  09/20/2013
 		$user_data = get_user_by('login', $login);
 	}
 
-*If the user login username post is empty, then error "Enter a username or e-mail address." will be sent. 
+*If the user login post is empty, then error "Enter a username or e-mail address." will be sent. 
 *If that's not the case but the user logs in with an invalid email then there will be no data for the user and error "There is no user registered with that email address." will be sent.
 *If neither of those are the case and the user logs in the post with correct username/email adress, then the users' data will be recieved and logged in successfully.
