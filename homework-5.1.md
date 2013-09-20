@@ -15,3 +15,20 @@
 * **Bonus points**: open a pull request back to the original repo with your work to date.
 
 [wordpress]:https://github.com/Wordpress/Wordpress/
+
+My example:                  09/20/2013
+
+	if ( empty( $_POST['user_login'] ) ) {
+		$errors->add('empty_username', __('<strong>ERROR</strong>: Enter a username or e-mail address.'));
+	} else if ( strpos( $_POST['user_login'], '@' ) ) {
+		$user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
+		if ( empty( $user_data ) )
+			$errors->add('invalid_email', __('<strong>ERROR</strong>: There is no user registered with that email address.'));
+	} else {
+		$login = trim($_POST['user_login']);
+		$user_data = get_user_by('login', $login);
+	}
+
+*If the user login username post is empty, then error "Enter a username or e-mail address." will be sent. 
+*If that's not the case but the user logs in with an invalid email then there will be no data for the user and error "There is no user registered with that email address." will be sent.
+*If neither of those are the case and the user logs in the post with correct username/email adress, then the users' data will be recieved and logged in successfully.
