@@ -15,3 +15,34 @@ foreach ( $collection as $item ) {
 
 * Save your file locally, git add and git commit it (don't forget: -m 'explain why!'), and git push your changes to your Github account.
 * **Bonus points:** open a pull request back to the original repo.
+
+
+public function getChartByIndex($index = null)
+    {
+        $chartCount = count($this->_chartCollection);
+        if ($chartCount == 0) {
+            return false;
+        }
+        if (is_null($index)) {
+            $index = --$chartCount;
+        }
+        if (!isset($this->_chartCollection[$index])) {
+            return false;
+        }
+
+        return $this->_chartCollection[$index];
+    }
+
+    /**
+     * Return an array of the names of charts on this worksheet
+     *
+     * @return string[] The names of charts
+     * @throws PHPExcel_Exception
+     */
+    public function getChartNames()
+    {
+        $chartNames = array();
+        foreach($this->_chartCollection as $chart) {
+            $chartNames[] = $chart->getName();
+        }
+        return $chartNames;
