@@ -16,7 +16,7 @@ foreach ( $collection as $item ) {
 * Save your file locally, git add and git commit it (don't forget: -m 'explain why!'), and git push your changes to your Github account.
 * **Bonus points:** open a pull request back to the original repo.
 
-
+(Not a loop:)
 public function getChartByIndex($index = null)
     {
         $chartCount = count($this->_chartCollection);
@@ -33,6 +33,7 @@ public function getChartByIndex($index = null)
         return $this->_chartCollection[$index];
     }
 
+(Actual Loop:)
     /**
      * Return an array of the names of charts on this worksheet
      *
